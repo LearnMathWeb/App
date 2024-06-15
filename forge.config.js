@@ -4,12 +4,20 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: "./assets/icon.ico"
   },
+  publishers: [
+    "realyasser"
+  ],
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
       config: {},
+    },
+    {
+      name: '@electron-forge/maker-appx',
+      config: {}
     },
     {
       name: '@electron-forge/maker-zip',

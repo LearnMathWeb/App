@@ -1,6 +1,13 @@
 const { app, BrowserWindow } = require("electron");
 
-app.on("ready", () => {
+app.on("ready", async () => {
+
+    const url =  await fetch("https://learnmathweb.github.io/url/url.json", {
+        method: "get"
+    });
+
+    const response = JSON.parse(await url.text());
+
     const window = new BrowserWindow({
         title: "LearnMath",
         height: 600,
@@ -11,7 +18,7 @@ app.on("ready", () => {
     });
 
     window.setMenu(null);
-    window.loadURL("http://localhost:444/");
+    window.loadURL(`https://${response.hostname}/dashboard.php`);
 
 });
 
