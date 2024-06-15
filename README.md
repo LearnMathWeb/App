@@ -1,8 +1,7 @@
-
-
 <div align="center">
     <img src="./assets/icon.png" height="150" />
 </div>
+
 # LearnMath App [BETA]
 
 LearnMath is a website where you can learn mathematics for free. This app will open for you the website faster than before in just a click.
